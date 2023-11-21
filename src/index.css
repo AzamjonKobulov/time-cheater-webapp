@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/public/assets/font/CeraPro-Medium.eot");
+  src: local("Cera Pro Medium"), local("CeraPro-Medium"),
+    url("/public/assets/font/CeraPro-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/public/assets/font/CeraPro-Medium.woff2") format("woff2"),
+    url("/public/assets/font/CeraPro-Medium.woff") format("woff"),
+    url("/public/assets/font/CeraPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/public/assets/font/CeraPro-Bold.eot");
+  src: local("Cera Pro Bold"), local("CeraPro-Bold"),
+    url("/public/assets/font/CeraPro-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/public/assets/font/CeraPro-Bold.woff2") format("woff2"),
+    url("/public/assets/font/CeraPro-Bold.woff") format("woff"),
+    url("/public/assets/font/CeraPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/public/assets/font/CeraPro-Regular.eot");
+  src: local("Cera Pro Regular"), local("CeraPro-Regular"),
+    url("/public/assets/font/CeraPro-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/public/assets/font/CeraPro-Regular.woff2") format("woff2"),
+    url("/public/assets/font/CeraPro-Regular.woff") format("woff"),
+    url("/public/assets/font/CeraPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-cera-pro;
+  }
+
+  h1 {
+    @apply text-4xl 3xl:text-5xl text-brand-title text-center font-bold;
+  }
+
+  input {
+    @apply bg-brand-purple-light text-brand-purple-100 font-medium rounded outline-none py-3 px-5;
+  }
+}
+
+.bg-main {
+  background: linear-gradient(0deg, #f0f0f5 0%, #f0f0f5 100%), #3c3fa3;
+}
+
+input[type="radio"]:checked + label > div {
+  @apply shadow-none;
+}
+
+input[type="radio"]:checked + label > div > span {
+  @apply bg-brand-wind;
+}
+
+input[type="checkbox"]:checked + label > div {
+  @apply bg-brand-purple-100;
+}
+
+input[type="checkbox"]:checked + label > div > span {
+  @apply block;
+}
+
+.horizontal-slider {
+  @apply w-full;
+}
+
+.example-thumb {
+  @apply cursor-pointer p-[9px] mt-0.5 bg-brand-purple-100 rounded-full;
+}
+
+/* .example-thumb.active {
+  @apply bg-brand-purple-100;
+} */
+
+.example-track {
+  @apply py-1 rounded-full bg-[#D9D9D9];
+}
+
+.example-track.example-track-0 {
+  @apply py-1 bg-brand-wind rounded-full;
+}
+
+.horizontal-slider .example-track {
+  @apply top-5 h-1;
+}
+
+.horizontal-slider .example-thumb {
+  @apply top-3 w-2.5 outline-none h-2.5 leading-10;
+}
